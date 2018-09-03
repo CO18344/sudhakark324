@@ -9,6 +9,7 @@ void Chk(char);
 char arr[]={'C','D','A','C','B','B','C','A','C','B','A','A','A','C','A'};
 int main()
 {char ch;
+
 printf("\t\t\tWELCOME\t TO  KBC\n\n");
 printf("U can use following lifelines for one time:\n ");
 printf("1. 50-50 lifline for by pressing 'H'\n ");                              //Lifelines
@@ -129,75 +130,77 @@ return 0;
 }
 void Chk(char ch)
 {k=i+1;
-if(ch=='Q')
+  if(ch=='Q')
 {
-printf("\nYour prize money: Rs.%lu",score);
-exit(0);
+        printf("\nYour prize money: Rs.%lu",score);
+        exit(0);
 }
 
 if(ch=='H')
 {
-if(j==0)
+  if(j==0)
 {
-printf("\nYou have already used your lifeline\n");
-printf("Choice=");
-scanf(" %c",&ch);
-Chk(ch);
-return ;
+        printf("\nYou have already used your lifeline\n");
+        printf("Choice=");
+        scanf(" %c",&ch);
+        Chk(ch);
+        return ;
 }
 else
 {j=0;
-if(arr[i]=='A')
-printf("\n(B)and(D)are wrong Options");
-else if(arr[i]=='B')
-printf("(C)and(D)are wrong options");
-else if(arr[i]=='C')
-printf("(A)and(D)are wrong options");
-else
-printf("(A)and(B)are wrong options");
+  if(arr[i]=='A')
+        printf("\n(B)and(D)are wrong Options");
+  else if(arr[i]=='B')
+        printf("(C)and(D)are wrong options");
+  else if(arr[i]=='C')
+        printf("(A)and(D)are wrong options");
+  else
+        printf("(A)and(B)are wrong options");
+        
 printf("\nChoice=");
 scanf(" %c",&ch);
 Chk(ch);
 return ;
 }
 }
+
 if(ch=='P')
-{if(p==0)
+{  if(p==0)
 {
-printf("\nYou have already used this lifeline\n");
-printf("Choice=");
-scanf(" %c",&ch);
-Chk(ch);
-return ;
+        printf("\nYou have already used this lifeline\n");
+        printf("Choice=");
+        scanf(" %c",&ch);
+        Chk(ch);
+        return ;
 }
 else
 {p=0;
- printf("\nChances for correctness\n");
-ch1=arr[i];
-if(ch1=='A')
+        printf("\nChances for correctness\n");
+        ch1=arr[i];
+   if(ch1=='A')
 {
-printf("80%--(A)");
-printf("60%--(D)");
-printf("40%--(B)");
-printf("20%--(C)");
+        printf("80%--(A)");
+        printf("60%--(D)");
+        printf("40%--(B)");
+        printf("20%--(C)");
 }
-else if(ch1=='B')
-{printf("80%--(B)");
-printf("60%--(A)");
-printf("40%--(D)");
-printf("20%--(C)");
+   else if(ch1=='B')
+{       printf("80%--(B)");
+        printf("60%--(A)");
+        printf("40%--(D)");
+        printf("20%--(C)");
 }
-else if(ch1=='C')
-{printf("80%--(C)");
-printf("60%--(A)");
-printf("40%--(B)");
-printf("20%--(D)");
+   else if(ch1=='C')
+{       printf("80%--(C)");
+        printf("60%--(A)");
+        printf("40%--(B)");
+        printf("20%--(D)");
 }
-else
-{printf("80%--(D)");
-printf("60%--(A)");
-printf("40%--(B)");
-printf("20%--(C)");
+   else
+{       printf("80%--(D)");
+        printf("60%--(A)");
+        printf("40%--(B)");
+        printf("20%--(C)");
 }
 }
 printf("\nChoice=");
@@ -205,31 +208,33 @@ scanf(" %c",&ch);
 Chk(ch);
 return ;
 }
+
 if(arr[i]==ch)
 {
 printf("Correct Answer!!!!");
-if(k==1)
-score=score+2500;
-else if (k<=11)
-score=score*2;
-else if(k==11)
-score=3000000;
-else if(k<=14)
-score=score+500000;                                                                                                       //Prize
-else
-score=10000000;
+   if(k==1)
+         score=score+2500;
+   else if (k<=11)
+         score=score*2;
+   else if(k==11)
+         score=3000000;
+   else if(k<=14)
+         score=score+500000;                                                                                                       //Prize
+   else
+         score=10000000;
 printf("\nAmount = Rs.%lu\n ",score);
 i++;
 }
+
 else
-{if(k>=5 && k<=9)
-Reward=40000;
-else if(k>=10&&k<=14)
-Reward=1280000;
-else if(k==15)
-Reward=score;
-else
-Reward=0;
+{  if(k>=5 && k<=9)
+         Reward=40000;
+   else if(k>=10&&k<=14)
+         Reward=1280000;
+   else if(k==15)
+         Reward=score;
+   else
+         Reward=0;
 printf("\nYou loose!!!!\n\aFinal Amount: %lu Rs.",Reward);
 exit(0);
 }
